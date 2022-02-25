@@ -27,12 +27,12 @@ agree.addEventListener('click', habilitar);
 
 buttonEnviar.addEventListener('click', autenticationLogin);
 
-var limite = 500;
-var digitados = 0;
-
 function contar() {
+  const limite = 500;
+  let digitados = 0;
+
   digitados += 1;
-  let restantes = limite - digitados;
+  const restantes = limite - digitados;
   span.innerHTML = restantes;
 }
 
