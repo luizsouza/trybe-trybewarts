@@ -1,0 +1,67 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+header, main, footer {
+    flex-shrink: 0;
+}
+
+/* requisito 1 2 3 4 */
+.header {
+  display: flex;
+  background-color: rgb(50, 167, 145);
+  justify-content: space-between;
+  align-content: center;
+  height: 60px;
+}
+
+#trybewarts-header-title {
+  justify-content: center;
+  align-content: center;
+  font-size: 5vh;
+}
+
+.trybewarts-login {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/* requisito 7 */
+
+#trybewarts-forms-logo {
+  height: 500px;
+  float: right;
+}
+
+
+/* Requisitos do form 5 6 8 9 10 11 12 13 14 15 16 17 18 */
+main {
+  display: flex;
+  flex-grow: 1;
+}
+
+#evaluation-form {
+  display: flex;
+  width: 675px;
+  flex-direction: column;
+}
+
+#form-parte-um {
+  display: flex;
+}
+
+#form-parte-tres {
+  display: flex;
+  flex-direction: column;
+}
+
+#label-family {
+  display: flex;
+}
+
+/* Requisito 19*/
+
+
+/* Requisitos bonus 20 */
