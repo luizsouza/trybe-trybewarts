@@ -1,12 +1,9 @@
-html,
-body {
+html, body {
   width: 100%;
   height: 100%;
 }
 
-header,
-main,
-footer {
+header, main, footer {
   flex-shrink: 0;
 }
 
@@ -38,7 +35,6 @@ footer {
   float: right;
 }
 
-
 /* Requisitos do form 5 6 8 9 10 11 12 13 14 15 16 17 18 */
 main {
   display: flex;
@@ -63,8 +59,3 @@ main {
 #label-family {
   display: flex;
 }
-
-/* Requisito 19*/
-
-
-/* Requisitos bonus 20 */
