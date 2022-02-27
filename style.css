@@ -55,3 +55,7 @@ main {
 #label-family {
   display: flex;
 }
+
+textarea {
+  resize: none;
+}

@@ -1,8 +1,8 @@
 const buttonEnviar = document.querySelector('.buttonSend');
 const btnSendForm = document.querySelector('#submit-btn');
 const agree = document.querySelector('#agreement');
-const text = document.getElementById('textarea');
-const span = document.getElementById('counter');
+const areaText = document.getElementById('textarea');
+
 
 function autenticationLogin(botao) {
   botao.preventDefault();
@@ -15,6 +15,8 @@ function autenticationLogin(botao) {
   }
 }
 
+buttonEnviar.addEventListener('click', autenticationLogin);
+
 function habilitar() {
   if (agree.checked) {
     btnSendForm.disabled = false;
@@ -25,15 +27,11 @@ function habilitar() {
 
 agree.addEventListener('click', habilitar);
 
-buttonEnviar.addEventListener('click', autenticationLogin);
-
-function contar() {
-  const limite = 500;
-  let digitados = 0;
-
-  digitados += 1;
-  const restantes = limite - digitados;
-  span.innerHTML = restantes;
+function contadorDeCarateresRestantes(caixaDeTexto) {
+  const maxLength = caixaDeTexto.getAttribute('maxlength');
+  const currentLength = caixaDeTexto.value.length;
+  const caracteresAtuais = maxLength - currentLength;
+  document.getElementById('counter').innerText = caracteresAtuais;
 }
 
-text.addEventListener('keydown', contar);
+areaText.addEventListener('input', contadorDeCarateresRestantes);
