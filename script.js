@@ -6,6 +6,7 @@ const nome = document.querySelector('#input-name');
 const sobrenome = document.querySelector('#input-lastname');
 const email = document.querySelector('#input-email');
 const casa = document.querySelector('#house');
+
 const formulario = document.querySelector('#evaluation-form');
 
 function autenticationLogin(botao) {
@@ -43,14 +44,16 @@ areaText.addEventListener('input', contadorDeCarateresRestantes);
 function enviaFormulario() {
   console.log('Nome: ' + nome.value);
   console.log('Sobrenome: ' + sobrenome.value);
+  const familia = document.querySelector('input[name="family"]:checked').value;
+  const rate = document.querySelector('input[name="rate"]:checked').value;
   formulario.innerHTML = 
   '<p>Nome: ' + nome.value + ' ' + sobrenome.value + '</p>' + 
   '<p>Email: ' + email.value + '</p>' +
   '<p>Casa: ' + casa.value + '</p>' +
-  '<p>Família: Famíla Escolhida</p>' +
+  '<p>Família: ' + familia + '</p>' +
   '<p>Matérias: Matérias, Marcadas, Aqui</p>' +
-  '<p>Avaliação: NotaAqui</p>' +
-  '<p>Observações: Observações aqui</p>'
+  '<p>Avaliação: ' + rate + '</p>' +
+  '<p>Observações: ' + areaText.value + '</p>'
   ;
 }
 
