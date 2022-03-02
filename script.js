@@ -45,7 +45,7 @@ function materiasEscolhidas() {
   const materias = document.querySelectorAll('.subject:checked');
   const vetorMaterias = [];
   for (let i = 0; i < materias.length; i +=1){
-    vetorMaterias.push(materias[i].value);
+     vetorMaterias.push(materias[i].value);
   }
   return vetorMaterias.toString().replace(/,/g, ', ');
 }
