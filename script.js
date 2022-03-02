@@ -27,10 +27,10 @@ function habilitar() {
 
 agree.addEventListener('click', habilitar);
 
-function contadorDeCarateresRestantes(caixaDeTexto) {
-  const maxLength = caixaDeTexto.getAttribute('maxlength');
-  const currentLength = caixaDeTexto.value.length;
-  const caracteresAtuais = maxLength - currentLength;
+function contadorDeCarateresRestantes() {
+  const maxLength = JSON.parse(areaText.getAttribute('maxlength'));
+  let currentLength = areaText.value.length;
+  let caracteresAtuais = maxLength - currentLength;
   document.getElementById('counter').innerText = caracteresAtuais;
 }
 
