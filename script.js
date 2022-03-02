@@ -34,8 +34,8 @@ agree.addEventListener('click', habilitar);
 
 function contadorDeCarateresRestantes() {
   const maxLength = JSON.parse(areaText.getAttribute('maxlength'));
-  let currentLength = areaText.value.length;
-  let caracteresAtuais = maxLength - currentLength;
+  const currentLength = areaText.value.length;
+  const caracteresAtuais = maxLength - currentLength;
   document.getElementById('counter').innerText = caracteresAtuais;
 }
 
@@ -44,27 +44,25 @@ areaText.addEventListener('input', contadorDeCarateresRestantes);
 function materiasEscolhidas() {
   const materias = document.querySelectorAll('.subject:checked');
   const vetorMaterias = [];
-  for (let i = 0; i < materias.length; i +=1){
-     vetorMaterias.push(materias[i].value);
+  for (let i = 0; i < materias.length; i += 1) {
+    vetorMaterias.push(materias[i].value);
   }
   return vetorMaterias.toString().replace(/,/g, ', ');
 }
 
 function enviaFormulario() {
-  console.log('Nome: ' + nome.value);
-  console.log('Sobrenome: ' + sobrenome.value);
+  console.log(`Nome: ${nome.value}`);
+  console.log(`Sobrenome: ${sobrenome.value}`);
   const familia = document.querySelector('input[name="family"]:checked').value;
   const rate = document.querySelector('input[name="rate"]:checked').value;
   const materias = materiasEscolhidas();
-  formulario.innerHTML = 
-  '<p>Nome: ' + nome.value + ' ' + sobrenome.value + '</p>' + 
-  '<p>Email: ' + email.value + '</p>' +
-  '<p>Casa: ' + casa.value + '</p>' +
-  '<p>Família: ' + familia + '</p>' +
-  '<p>Matérias: ' + materias + '</p>' +
-  '<p>Avaliação: ' + rate + '</p>' +
-  '<p>Observações: ' + areaText.value + '</p>'
-  ;
+  formulario.innerHTML = `<p>Nome: ${nome.value} ${sobrenome.value}</p>`
+  + `<p>Email: ${email.value}</p>`
+  + `<p>Casa: ${casa.value}</p>`
+  + `<p>Família: ${familia}</p>`
+  + `<p>Matérias: ${materias}</p>`
+  + `<p>Avaliação: ${rate}</p>`
+  + `<p>Observações: ${areaText.value}</p>`;
 }
 
 btnSendForm.addEventListener('click', (e) => {
